@@ -1,0 +1,19 @@
+$icon-font-path: '../bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/';
+// bower:scss
+@import "../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap.scss";
+// endbower
+@import "_variables.scss";
+@import "_mixins.scss";
+@import "_modules.scss";
+@import "_theme.scss";
+
+.home-text h1 {
+	@include bp(lg) {
+		font-size: 2.8em;
+	}
+}
+.home-text h3 {
+	@include bp(lg) {
+		font-size: 2em;
+	}
+}

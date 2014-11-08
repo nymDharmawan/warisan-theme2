@@ -1,0 +1,88 @@
+//==========  Full Background Images  ==========*/
+@mixin full-bg($url){
+  background: url($url) no-repeat center center fixed;
+  background-size: cover;
+}
+//==========  breakpoints  ==========*/
+
+@mixin bp($point) {
+  @if $point == lg {
+    @media (max-width: $bp-lg) { @content; }
+  }
+  @else if $point == md {
+    @media (max-width: $bp-md) { @content; }
+  }
+  @else if $point == sm {
+    @media (max-width: $bp-sm)  { @content; }
+  }
+  @else if $point == xs {
+    @media (max-width: $bp-x)  { @content; }
+  }
+  @else if $point == xxs {
+    @media (max-width: $bp-xs)  { @content; }
+  }
+}
+
+//==========  Rem font size  ==========*/
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return $remSize * 1rem;
+}
+
+@mixin font-size($size) {
+  font-size: $size;
+  font-size: calculateRem($size);
+}
+//example p{@include font-size(14px)}
+
+
+//==========  transition  ==========*/
+
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
+//==========  keyframes  ==========*/
+@mixin keyframes($animation-name) {
+  @-webkit-keyframes $animation-name {
+    @content;
+  }
+  @-moz-keyframes $animation-name {
+    @content;
+  }
+  @-ms-keyframes $animation-name {
+    @content;
+  }
+  @-o-keyframes $animation-name {
+    @content;
+  }
+  @keyframes $animation-name {
+    @content;
+  }
+}
+
+@mixin animation($str) {
+  -webkit-animation: #{$str};
+  -moz-animation: #{$str};
+  -ms-animation: #{$str};
+  -o-animation: #{$str};
+  animation: #{$str};
+}
+//sample usage
+// @include keyframes(slide-down) {
+//   0% { opacity: 1; }
+//   90% { opacity: 0; }
+// }
+
+// .element {
+//   width: 100px;
+//   height: 100px;
+//   background: black;
+//   @include animation('slide-down 5s 3');
+// }
+
+

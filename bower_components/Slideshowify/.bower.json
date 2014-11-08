@@ -1,0 +1,13 @@
+{
+  "name": "Slideshowify",
+  "homepage": "https://github.com/subchild/jquery.slideshowify.js",
+  "_release": "762969d2f5",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "762969d2f5400f18ec8ac00075d5d06d79416431"
+  },
+  "_source": "https://github.com/subchild/jquery.slideshowify.js.git",
+  "_target": "*",
+  "_originalSource": "https://github.com/subchild/jquery.slideshowify.js.git"
+}
